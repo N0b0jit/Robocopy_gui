@@ -1,0 +1,11 @@
+C:\Users\noboj\Desktop\Nexus hui\publish\NexusCopy\NexusCopy.pdb
+C:\Users\noboj\Desktop\Nexus hui\publish\NexusCopy\app.manifest
+C:\Users\noboj\Desktop\Nexus hui\publish\NexusCopy\D3DCompiler_47_cor3.dll
+C:\Users\noboj\Desktop\Nexus hui\publish\NexusCopy\PenImc_cor3.dll
+C:\Users\noboj\Desktop\Nexus hui\publish\NexusCopy\PresentationNative_cor3.dll
+C:\Users\noboj\Desktop\Nexus hui\publish\NexusCopy\vcruntime140_cor3.dll
+C:\Users\noboj\Desktop\Nexus hui\publish\NexusCopy\wpfgfx_cor3.dll
+C:\Users\noboj\Desktop\Nexus hui\publish\NexusCopy\NexusCopy.Core.pdb
+C:\Users\noboj\Desktop\Nexus hui\publish\NexusCopy\NexusCopy.Services.pdb
+C:\Users\noboj\Desktop\Nexus hui\publish\NexusCopy\NexusCopy.Shell.pdb
+C:\Users\noboj\Desktop\Nexus hui\publish\NexusCopy\NexusCopy.exe

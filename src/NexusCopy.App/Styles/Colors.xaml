@@ -1,0 +1,40 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Nexus Copy Brand Colors -->
+    <Color x:Key="NexusPrimary">#0078D4</Color>
+    <Color x:Key="NexusAccent">#00BCF2</Color>
+    <Color x:Key="NexusSuccess">#107C10</Color>
+    <Color x:Key="NexusWarning">#FF8C00</Color>
+    <Color x:Key="NexusError">#D13438</Color>
+    
+    <!-- Dark Theme Colors -->
+    <Color x:Key="NexusDarkBackground">#1C1C1C</Color>
+    <Color x:Key="NexusDarkSurface">#2D2D2D</Color>
+    <Color x:Key="NexusDarkTextPrimary">#FFFFFF</Color>
+    <Color x:Key="NexusDarkTextSecondary">#CCCCCC</Color>
+    
+    <!-- Light Theme Colors -->
+    <Color x:Key="NexusLightBackground">#F3F3F3</Color>
+    <Color x:Key="NexusLightSurface">#FFFFFF</Color>
+    <Color x:Key="NexusLightTextPrimary">#000000</Color>
+    <Color x:Key="NexusLightTextSecondary">#333333</Color>
+
+    <!-- Brushes -->
+    <SolidColorBrush x:Key="NexusPrimaryBrush" Color="{StaticResource NexusPrimary}"/>
+    <SolidColorBrush x:Key="NexusAccentBrush" Color="{StaticResource NexusAccent}"/>
+    <SolidColorBrush x:Key="NexusSuccessBrush" Color="{StaticResource NexusSuccess}"/>
+    <SolidColorBrush x:Key="NexusWarningBrush" Color="{StaticResource NexusWarning}"/>
+    <SolidColorBrush x:Key="NexusErrorBrush" Color="{StaticResource NexusError}"/>
+    
+    <SolidColorBrush x:Key="NexusDarkBackgroundBrush" Color="{StaticResource NexusDarkBackground}"/>
+    <SolidColorBrush x:Key="NexusDarkSurfaceBrush" Color="{StaticResource NexusDarkSurface}"/>
+    <SolidColorBrush x:Key="NexusDarkTextPrimaryBrush" Color="{StaticResource NexusDarkTextPrimary}"/>
+    <SolidColorBrush x:Key="NexusDarkTextSecondaryBrush" Color="{StaticResource NexusDarkTextSecondary}"/>
+    
+    <SolidColorBrush x:Key="NexusLightBackgroundBrush" Color="{StaticResource NexusLightBackground}"/>
+    <SolidColorBrush x:Key="NexusLightSurfaceBrush" Color="{StaticResource NexusLightSurface}"/>
+    <SolidColorBrush x:Key="NexusLightTextPrimaryBrush" Color="{StaticResource NexusLightTextPrimary}"/>
+    <SolidColorBrush x:Key="NexusLightTextSecondaryBrush" Color="{StaticResource NexusLightTextSecondary}"/>
+
+</ResourceDictionary>

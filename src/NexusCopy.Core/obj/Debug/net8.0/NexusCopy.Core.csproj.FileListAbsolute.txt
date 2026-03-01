@@ -1,0 +1,11 @@
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\bin\Debug\net8.0\NexusCopy.Core.deps.json
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\bin\Debug\net8.0\NexusCopy.Core.dll
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\bin\Debug\net8.0\NexusCopy.Core.pdb
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Debug\net8.0\NexusCopy.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Debug\net8.0\NexusCopy.Core.AssemblyInfoInputs.cache
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Debug\net8.0\NexusCopy.Core.AssemblyInfo.cs
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Debug\net8.0\NexusCopy.Core.csproj.CoreCompileInputs.cache
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Debug\net8.0\NexusCopy.Core.dll
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Debug\net8.0\refint\NexusCopy.Core.dll
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Debug\net8.0\NexusCopy.Core.pdb
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Debug\net8.0\ref\NexusCopy.Core.dll

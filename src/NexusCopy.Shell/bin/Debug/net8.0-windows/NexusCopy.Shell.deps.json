@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NexusCopy.Shell/1.0.0": {
+        "dependencies": {
+          "NexusCopy.Core": "1.0.0"
+        },
+        "runtime": {
+          "NexusCopy.Shell.dll": {}
+        }
+      },
+      "NexusCopy.Core/1.0.0": {
+        "runtime": {
+          "NexusCopy.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NexusCopy.Shell/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NexusCopy.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

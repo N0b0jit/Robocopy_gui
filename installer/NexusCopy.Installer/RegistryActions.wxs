@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  
+  <Fragment>
+    
+    <!-- Context Menu Registry Entries -->
+    <DirectoryRef Id="TARGETDIR">
+      
+      <!-- Registry entries for context menu -->
+      <Component Id="ContextMenuRegistry" Guid="12345678-ABCD-EFGH-IJKL-123456789ABC">
+        
+        <!-- Parent context menu entry for Directory -->
+        <RegistryKey Root="HKCR" Key="Directory\shell\NexusCopy" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="Nexus Copy Here →" />
+          <RegistryValue Type="string" Name="Icon" Value="[INSTALLFOLDER]NexusCopy.exe,0" />
+          <RegistryValue Type="string" Name="SubCommands" Value="" />
+        </RegistryKey>
+
+        <!-- Sub-commands for Directory -->
+        <RegistryKey Root="HKCR" Key="Directory\shell\NexusCopy\shell\CopyTo" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="📋 Copy To..." />
+          <RegistryValue Type="string" Name="Icon" Value="[INSTALLFOLDER]NexusCopy.exe,1" />
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR" Key="Directory\shell\NexusCopy\shell\CopyTo\command" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="&quot;[INSTALLFOLDER]NexusCopy.exe&quot; --mode copy --source &quot;%1&quot;" />
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR" Key="Directory\shell\NexusCopy\shell\MoveTo" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="✂️ Move To..." />
+          <RegistryValue Type="string" Name="Icon" Value="[INSTALLFOLDER]NexusCopy.exe,2" />
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR" Key="Directory\shell\NexusCopy\shell\MoveTo\command" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="&quot;[INSTALLFOLDER]NexusCopy.exe&quot; --mode move --source &quot;%1&quot;" />
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR" Key="Directory\shell\NexusCopy\shell\MirrorTo" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="🔁 Mirror To..." />
+          <RegistryValue Type="string" Name="Icon" Value="[INSTALLFOLDER]NexusCopy.exe,3" />
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR" Key="Directory\shell\NexusCopy\shell\MirrorTo\command" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="&quot;[INSTALLFOLDER]NexusCopy.exe&quot; --mode mirror --source &quot;%1&quot;" />
+        </RegistryKey>
+
+        <!-- Parent context menu entry for Directory\Background -->
+        <RegistryKey Root="HKCR" Key="Directory\Background\shell\NexusCopy" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="Nexus Copy Here →" />
+          <RegistryValue Type="string" Name="Icon" Value="[INSTALLFOLDER]NexusCopy.exe,0" />
+          <RegistryValue Type="string" Name="SubCommands" Value="" />
+        </RegistryKey>
+
+        <!-- Sub-commands for Directory\Background -->
+        <RegistryKey Root="HKCR" Key="Directory\Background\shell\NexusCopy\shell\CopyTo" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="📋 Copy To..." />
+          <RegistryValue Type="string" Name="Icon" Value="[INSTALLFOLDER]NexusCopy.exe,1" />
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR" Key="Directory\Background\shell\NexusCopy\shell\CopyTo\command" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="&quot;[INSTALLFOLDER]NexusCopy.exe&quot; --mode copy --source &quot;%V&quot;" />
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR" Key="Directory\Background\shell\NexusCopy\shell\MoveTo" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="✂️ Move To..." />
+          <RegistryValue Type="string" Name="Icon" Value="[INSTALLFOLDER]NexusCopy.exe,2" />
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR" Key="Directory\Background\shell\NexusCopy\shell\MoveTo\command" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="&quot;[INSTALLFOLDER]NexusCopy.exe&quot; --mode move --source &quot;%V&quot;" />
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR" Key="Directory\Background\shell\NexusCopy\shell\MirrorTo" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="🔁 Mirror To..." />
+          <RegistryValue Type="string" Name="Icon" Value="[INSTALLFOLDER]NexusCopy.exe,3" />
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR" Key="Directory\Background\shell\NexusCopy\shell\MirrorTo\command" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="" Value="&quot;[INSTALLFOLDER]NexusCopy.exe&quot; --mode mirror --source &quot;%V&quot;" />
+        </RegistryKey>
+
+        <!-- Add/Remove Programs entries -->
+        <RegistryKey Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\NexusCopy" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="DisplayName" Value="Nexus Copy" />
+          <RegistryValue Type="string" Name="Publisher" Value="Nexus Copy" />
+          <RegistryValue Type="string" Name="DisplayVersion" Value="1.0.0.0" />
+          <RegistryValue Type="string" Name="InstallLocation" Value="[INSTALLFOLDER]" />
+          <RegistryValue Type="integer" Name="NoModify" Value="1" />
+          <RegistryValue Type="integer" Name="NoRepair" Value="1" />
+        </RegistryKey>
+
+      </Component>
+      
+    </DirectoryRef>
+    
+  </Fragment>
+</Wix>

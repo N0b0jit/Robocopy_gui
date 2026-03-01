@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "t05YRerv6Rk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\noboj\\Desktop\\Nexus hui\\installer\\NexusCopy.Installer\\NexusCopy.Installer.wixproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\noboj\\.nuget\\packages\\wixtoolset.ui.wixext\\4.0.2\\wixtoolset.ui.wixext.4.0.2.nupkg.sha512",
+    "C:\\Users\\noboj\\.nuget\\packages\\wixtoolset.util.wixext\\4.0.2\\wixtoolset.util.wixext.4.0.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'WixToolset.Util.wixext' 4.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-jx4p-m4wm-vvjg",
+      "projectPath": "C:\\Users\\noboj\\Desktop\\Nexus hui\\installer\\NexusCopy.Installer\\NexusCopy.Installer.wixproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\noboj\\Desktop\\Nexus hui\\installer\\NexusCopy.Installer\\NexusCopy.Installer.wixproj",
+      "libraryId": "WixToolset.Util.wixext",
+      "targetGraphs": [
+        "native,Version=v0.0"
+      ]
+    }
+  ]
+}

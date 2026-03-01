@@ -1,0 +1,115 @@
+<UserControl x:Class="NexusCopy.App.Controls.ProgressPanelControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="120" d:DesignWidth="600">
+    
+    <Border BorderThickness="1" 
+            BorderBrush="{DynamicResource NexusBorderBrush}"
+            CornerRadius="4"
+            Padding="12"
+            Background="{DynamicResource NexusSurfaceBrush}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Current File -->
+            <TextBlock Grid.Row="0"
+                       Text="Current:"
+                       Style="{StaticResource NexusHeaderStyle}"
+                       Margin="0,0,0,4"/>
+            
+            <TextBlock Grid.Row="0"
+                       Text="{Binding CurrentFileName}"
+                       Style="{StaticResource NexusBodyStyle}"
+                       Margin="60,0,0,4"
+                       TextTrimming="CharacterEllipsis"/>
+            
+            <!-- Current File Progress -->
+            <Grid Grid.Row="1" Margin="0,4,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <ProgressBar Grid.Column="0"
+                             Value="{Binding CurrentFilePercent}"
+                             Maximum="100"
+                             Height="8"
+                             Margin="0,0,8,0"/>
+                
+                <TextBlock Grid.Column="1"
+                           Text="{Binding CurrentFilePercent, StringFormat={}{0:F1}%}"
+                           Style="{StaticResource NexusBodyStyle}"
+                           MinWidth="50"
+                           TextAlignment="Right"/>
+            </Grid>
+            
+            <!-- Overall Progress -->
+            <TextBlock Grid.Row="2"
+                       Text="Overall:"
+                       Style="{StaticResource NexusHeaderStyle}"
+                       Margin="0,0,0,4"/>
+            
+            <Grid Grid.Row="2" Margin="60,0,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <ProgressBar Grid.Column="0"
+                             Value="{Binding OverallPercent}"
+                             Maximum="100"
+                             Height="8"
+                             Margin="0,0,8,0"
+                             IsIndeterminate="{Binding IsIndeterminate}"/>
+                
+                <TextBlock Grid.Column="1"
+                           Text="{Binding OverallPercent, StringFormat={}{0:F1}%}"
+                           Style="{StaticResource NexusBodyStyle}"
+                           MinWidth="50"
+                           TextAlignment="Right"
+                           Margin="0,0,16,0"/>
+                
+                <TextBlock Grid.Column="2"
+                           Text="{Binding SpeedText}"
+                           Style="{StaticResource NexusBodyStyle}"
+                           MinWidth="80"
+                           TextAlignment="Right"
+                           Margin="0,0,16,0"/>
+                
+                <TextBlock Grid.Column="3"
+                           Text="{Binding EtaText}"
+                           Style="{StaticResource NexusBodyStyle}"
+                           MinWidth="80"
+                           TextAlignment="Right"/>
+            </Grid>
+            
+            <!-- Status Information -->
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Grid.Column="0"
+                           Text="{Binding FilesText}"
+                           Style="{StaticResource NexusBodyStyle}"
+                           Margin="0,0,16,0"/>
+                
+                <TextBlock Grid.Column="1"
+                           Text="{Binding StatusText}"
+                           Style="{StaticResource NexusBodyStyle}"
+                           TextTrimming="CharacterEllipsis"/>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

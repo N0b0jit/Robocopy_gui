@@ -1,0 +1,50 @@
+<UserControl x:Class="NexusCopy.App.Controls.CommandPreviewControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="800">
+    
+    <Border BorderThickness="1" 
+            BorderBrush="{DynamicResource NexusBorderBrush}"
+            CornerRadius="4"
+            Background="{DynamicResource NexusSurfaceBrush}"
+            Padding="8">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- Label -->
+            <TextBlock Grid.Column="0"
+                       Text="CMD:"
+                       Style="{StaticResource NexusHeaderStyle}"
+                       VerticalAlignment="Center"
+                       Margin="0,0,8,0"/>
+            
+            <!-- Command Text -->
+            <TextBox Grid.Column="1"
+                     Text="{Binding CommandPreview, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=OneWay}"
+                     IsReadOnly="True"
+                     Background="Transparent"
+                     BorderThickness="0"
+                     FontFamily="{StaticResource NexusMonospaceFontFamily}"
+                     FontSize="11"
+                     VerticalAlignment="Center"/>
+            
+            <!-- Copy Button -->
+            <Button Grid.Column="2"
+                    Content="📋"
+                    ToolTip="Copy command to clipboard"
+                    Command="{Binding CopyCommandCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                    Style="{StaticResource NexusSecondaryButtonStyle}"
+                    Width="32"
+                    Height="24"
+                    Margin="8,0,0,0"
+                    FontSize="12"/>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  
+  <Package Id="*" 
+           Name="Nexus Copy" 
+           Language="1033" 
+           Version="1.0.0.0" 
+           Manufacturer="Nexus Copy" 
+           UpgradeCode="12345678-1234-5678-9ABC-123456789ABC">
+    
+    <Package InstallerVersion="200" 
+             Compressed="yes" 
+             InstallScope="perMachine"
+             Description="Fast. Powerful. Simple. File copying reimagined."
+             Comments="Windows desktop application for robocopy with modern GUI"
+             Platform="x86"/>
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of Nexus Copy is already installed." />
+    
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- Feature Definition -->
+    <Feature Id="ProductFeature" Title="Nexus Copy" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ContextMenuRegistry" />
+    </Feature>
+
+    <!-- Directory Structure -->
+    <StandardDirectory Id="ProgramFilesFolder">
+      <Directory Id="INSTALLFOLDER" Name="NexusCopy" />
+    </StandardDirectory>
+
+    <!-- Application Files -->
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <!-- Main Application -->
+      <Component Id="MainExecutable">
+        <File Id="NexusCopyExe" 
+              Source="$(var.NexusCopy.App.TargetPath)" 
+              KeyPath="yes">
+          <Shortcut Id="DesktopShortcut" 
+                    Directory="DesktopFolder" 
+                    Name="Nexus Copy" 
+                    Description="Fast file copy manager" 
+                    Advertise="yes" />
+          <Shortcut Id="StartMenuShortcut" 
+                    Directory="ProgramMenuFolder" 
+                    Name="Nexus Copy" 
+                    Description="Fast file copy manager" 
+                    Advertise="yes" />
+        </File>
+      </Component>
+    </ComponentGroup>
+
+    <!-- Context Menu Registry Component -->
+    <Component Id="ContextMenuRegistry" Directory="INSTALLFOLDER">
+      <!-- Custom Action to install context menu -->
+      <CustomAction Id="InstallContextMenu" 
+                    BinaryKey="NexusCopyExe" 
+                    ExeCommand="--install-context-menu"
+                    Return="ignore" />
+      
+      <CustomAction Id="UninstallContextMenu" 
+                    BinaryKey="NexusCopyExe" 
+                    ExeCommand="--uninstall-context-menu"
+                    Return="ignore" />
+
+      <!-- Schedule custom actions -->
+      <InstallExecuteSequence>
+        <Custom Action="InstallContextMenu" After="InstallFinalize">NOT Installed</Custom>
+        <Custom Action="UninstallContextMenu" Before="RemoveFiles">Installed</Custom>
+      </InstallExecuteSequence>
+    </Component>
+
+    <!-- UI References -->
+    <UIRef Id="WixUI_InstallDir" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+
+    <!-- Properties -->
+    <Property Id="ARPNOREPAIR" Value="1" />
+    <Property Id="ARPNOMODIFY" Value="1" />
+
+    <!-- System Requirements -->
+    <Condition Message="Nexus Copy requires Windows 10 or later.">
+      <![CDATA[Installed OR (VersionNT >= 600)]]>
+    </Condition>
+
+  </Package>
+</Wix>

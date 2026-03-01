@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "targets": {
+    "native,Version=v0.0": {
+      "WixToolset.UI.wixext/4.0.2": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.UI.wixext.targets": {}
+        }
+      },
+      "WixToolset.Util.wixext/4.0.2": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.Util.wixext.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WixToolset.UI.wixext/4.0.2": {
+      "sha512": "BAHqdTgjsO8IBsnJmQa6RSzXplkJQQgRWzezca3EtAD3dj4TiFNanfo2Pi/iKi2mq3Pi2HK6ptCsnYN1cze05g==",
+      "type": "package",
+      "path": "wixtoolset.ui.wixext/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/WixToolset.UI.wixext.targets",
+        "wix.png",
+        "wixext4/WixToolset.UI.wixext.dll",
+        "wixtoolset.ui.wixext.4.0.2.nupkg.sha512",
+        "wixtoolset.ui.wixext.nuspec"
+      ]
+    },
+    "WixToolset.Util.wixext/4.0.2": {
+      "sha512": "imCNDLeTmNbT32Ov195oo8p7UBwtQYupGgpQ78XYhoX0y6FPtYiI3XYtrF3uPgD1szRlGYWS3bBRw8i+599cqQ==",
+      "type": "package",
+      "path": "wixtoolset.util.wixext/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/WixToolset.Util.wixext.targets",
+        "wix.png",
+        "wixext4/WixToolset.Util.wixext.dll",
+        "wixtoolset.util.wixext.4.0.2.nupkg.sha512",
+        "wixtoolset.util.wixext.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "native,Version=v0.0": [
+      "WixToolset.UI.wixext >= 4.0.2",
+      "WixToolset.Util.wixext >= 4.0.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\noboj\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\noboj\\Desktop\\Nexus hui\\installer\\NexusCopy.Installer\\NexusCopy.Installer.wixproj",
+      "projectName": "NexusCopy",
+      "projectPath": "C:\\Users\\noboj\\Desktop\\Nexus hui\\installer\\NexusCopy.Installer\\NexusCopy.Installer.wixproj",
+      "packagesPath": "C:\\Users\\noboj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\noboj\\Desktop\\Nexus hui\\installer\\NexusCopy.Installer\\obj\\",
+      "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\noboj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net462"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "native": {
+          "targetAlias": "net462",
+          "projectReferences": {}
+        }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "native": {
+        "targetAlias": "net462",
+        "dependencies": {
+          "WixToolset.UI.wixext": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          },
+          "WixToolset.Util.wixext": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          }
+        }
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WixToolset.Util.wixext' 4.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-jx4p-m4wm-vvjg",
+      "libraryId": "WixToolset.Util.wixext",
+      "targetGraphs": [
+        "native,Version=v0.0"
+      ]
+    }
+  ]
+}
