@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("© 2026 Nexus Copy")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a4d9808f1a18c923797b5532cd522aedb3af71c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nexus Copy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NexusCopy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

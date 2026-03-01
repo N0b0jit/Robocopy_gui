@@ -9,3 +9,4 @@ C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Release\net8.0\NexusCopy
 C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Release\net8.0\refint\NexusCopy.Core.dll
 C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Release\net8.0\NexusCopy.Core.pdb
 C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Release\net8.0\ref\NexusCopy.Core.dll
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Core\obj\Release\net8.0\NexusCopy.Core.sourcelink.json

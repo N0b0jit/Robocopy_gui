@@ -13,3 +13,4 @@ C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Shell\obj\Release\net8.0-windows\
 C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Shell\obj\Release\net8.0-windows\refint\NexusCopy.Shell.dll
 C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Shell\obj\Release\net8.0-windows\NexusCopy.Shell.pdb
 C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Shell\obj\Release\net8.0-windows\ref\NexusCopy.Shell.dll
+C:\Users\noboj\Desktop\Nexus hui\src\NexusCopy.Shell\obj\Release\net8.0-windows\NexusCopy.Shell.sourcelink.json
